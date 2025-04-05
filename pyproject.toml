@@ -1,0 +1,10 @@
+[project]
+name = "mcp-server"
+version = "0.1.0"
+description = "A simple mcp server to handle weather forcast"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+]
