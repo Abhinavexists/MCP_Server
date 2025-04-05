@@ -1,6 +1,6 @@
-# MCP
-A Simple implementation of a command-line tool that provides access to US weather data through a client-server architecture using the Model Context Protocol (MCP) and Google's Gemini AI.
-Built to practive and understand how MCP works.
+# Weather Tool MCP Client
+
+A command-line tool that provides access to US weather data through a client-server architecture using the Model Context Protocol (MCP) and Google's Gemini AI.
 
 ## Overview
 
@@ -18,12 +18,13 @@ This project connects a Python client application with a weather data server, al
 - Python 3.8+
 - Node.js (if running JavaScript server)
 - Google Gemini API key
+- uv package manager (required)
 
 ## Installation
 
 1. Clone the repository:
    ```
-   git clone https://github.com/Abhinavexists/MCP_Server.git
+   git clone https://github.com/yourusername/weather-tool.git
    cd weather-tool
    ```
 
@@ -44,7 +45,7 @@ This project connects a Python client application with a weather data server, al
    uv pip sync
    ```
 
-3. Create a `.env` file in the project root directory with your Gemini API key:
+5. Create a `.env` file in the project root directory with your Gemini API key:
    ```
    GEMINI_API_KEY=your_gemini_api_key_here
    ```
@@ -64,6 +65,14 @@ This project connects a Python client application with a weather data server, al
 
 3. Type `quit` to exit the application.
 
+## About uv Dependency Management
+
+This project uses `uv` for dependency management with the following configuration files:
+- `pyproject.toml`: Defines project metadata and dependencies
+- `uv.lock`: Locks dependency versions for reproducible environments
+
+Using `uv` instead of pip is required to ensure consistent dependencies and proper project setup.
+
 ## Available Tools
 
 The server provides the following tools:
@@ -75,6 +84,8 @@ The server provides the following tools:
 
 - `client.py`: MCP client that connects to the server and processes user queries using Gemini AI
 - `server.py`: MCP server that implements weather data tools and communicates with the National Weather Service API
+- `pyproject.toml`: Project configuration and dependencies
+- `uv.lock`: Locked dependency versions
 
 ## Error Handling
 
@@ -94,7 +105,14 @@ The application includes robust error handling for:
 
 [MIT License](LICENSE)
 
+## Acknowledgements
+
+- National Weather Service for providing the weather data API
+- Google for the Gemini AI API
+- The MCP SDK developers
+
 ## Resources
 
 For more information about Model Context Protocol (MCP), refer to the official Claude MCP documentation:
-- [Claude MCP Documentation](https://modelcontextprotocol.io/introduction)
+- [Claude MCP Documentation](https://docs.anthropic.com/claude/docs/model-context-protocol-mcp)
+- [Claude MCP GitHub](https://github.com/anthropics/anthropic-tools)
